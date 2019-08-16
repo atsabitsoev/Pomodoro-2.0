@@ -13,6 +13,8 @@
 		ACD7698F2306E74200918F83 /* Pomodoro_2_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACD7698D2306E74200918F83 /* Pomodoro_2_0.xcdatamodeld */; };
 		ACD769912306E74400918F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD769902306E74400918F83 /* Assets.xcassets */; };
 		ACD769942306E74400918F83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD769922306E74400918F83 /* LaunchScreen.storyboard */; };
+		ACD7699C2306E81F00918F83 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD7699B2306E81F00918F83 /* SettingsService.swift */; };
+		ACD7699F2306E93F00918F83 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD7699E2306E93F00918F83 /* Themes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		ACD769902306E74400918F83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACD769932306E74400918F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACD769952306E74400918F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACD7699B2306E81F00918F83 /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		ACD7699E2306E93F00918F83 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				ACD769862306E74200918F83 /* AppDelegate.swift */,
+				ACD7699D2306E91E00918F83 /* SettingsModel */,
 				ACD769882306E74200918F83 /* ViewController.swift */,
 				ACD7698A2306E74200918F83 /* Main.storyboard */,
 				ACD769902306E74400918F83 /* Assets.xcassets */,
@@ -65,6 +70,15 @@
 				ACD7698D2306E74200918F83 /* Pomodoro_2_0.xcdatamodeld */,
 			);
 			path = "Pomodoro 2.0";
+			sourceTree = "<group>";
+		};
+		ACD7699D2306E91E00918F83 /* SettingsModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACD7699B2306E81F00918F83 /* SettingsService.swift */,
+				ACD7699E2306E93F00918F83 /* Themes.swift */,
+			);
+			path = SettingsModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +154,8 @@
 			files = (
 				ACD769892306E74200918F83 /* ViewController.swift in Sources */,
 				ACD769872306E74200918F83 /* AppDelegate.swift in Sources */,
+				ACD7699C2306E81F00918F83 /* SettingsService.swift in Sources */,
+				ACD7699F2306E93F00918F83 /* Themes.swift in Sources */,
 				ACD7698F2306E74200918F83 /* Pomodoro_2_0.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89WB9E7UEU;
 				INFOPLIST_FILE = "Pomodoro 2.0/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +313,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "a.s.bitsoev.Pomodoro-2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,6 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89WB9E7UEU;
 				INFOPLIST_FILE = "Pomodoro 2.0/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "a.s.bitsoev.Pomodoro-2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
