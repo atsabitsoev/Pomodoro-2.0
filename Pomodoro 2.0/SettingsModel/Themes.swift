@@ -12,8 +12,11 @@ import UIKit
 
 struct Theme {
     
-    var color1: UIColor
-    var color2: UIColor
+    var mainColor: UIColor
+    var mainColorDark: UIColor
+    var additionalColor: UIColor
+    var middleColor: UIColor
+    var backgroundColor: UIColor
 }
 
 
@@ -24,7 +27,7 @@ class ThemeService {
         
         switch themeName {
         case .redYellow:
-            return Theme(color1: #colorLiteral(red: 0.9058823529, green: 0.2980392157, blue: 0.2352941176, alpha: 1), color2: #colorLiteral(red: 0.9450980392, green: 0.768627451, blue: 0.05882352941, alpha: 1))
+            return Theme(mainColor: #colorLiteral(red: 0.9058823529, green: 0.2980392157, blue: 0.2352941176, alpha: 1), mainColorDark: #colorLiteral(red: 0.8549019608, green: 0.2705882353, blue: 0.2117647059, alpha: 1), additionalColor: #colorLiteral(red: 0.9450980392, green: 0.768627451, blue: 0.05882352941, alpha: 1), middleColor: #colorLiteral(red: 0.9215686275, green: 0.4823529412, blue: 0.1647058824, alpha: 1), backgroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
         }
     }
 }

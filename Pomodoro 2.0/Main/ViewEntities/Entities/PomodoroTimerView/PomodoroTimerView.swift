@@ -16,6 +16,7 @@ class PomodoroTimerView: UIView {
     @IBInspectable var mainColor: UIColor = #colorLiteral(red: 0.003921568627, green: 0.6745098039, blue: 0.7568627451, alpha: 1)
     @IBInspectable var additionalColor: UIColor = #colorLiteral(red: 0.2901960784, green: 0.6431372549, blue: 0.7137254902, alpha: 1)
     @IBInspectable var arcsRadMultiplier: CGFloat = 0.75
+    @IBInspectable var indicatorColor: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     
     @IBInspectable var labTimeFontName: String?
     @IBInspectable var labTimeFontSize: CGFloat = 0
@@ -46,9 +47,6 @@ class PomodoroTimerView: UIView {
     
     var currentSeconds = 0 {
         didSet {
-            if currentSeconds > workSeconds {
-                currentSeconds = workSeconds
-            }
             self.setNeedsDisplay()
         }
     }
@@ -163,10 +161,10 @@ class PomodoroTimerView: UIView {
                                          startAngle: startAngle,
                                          endAngle: endAngle,
                                          clockwise: false)
-        UIColor.black.withAlphaComponent(0.5).setStroke()
+        self.indicatorColor.withAlphaComponent(0.5).setStroke()
         indicatorPath.lineWidth = radius
         indicatorPath.stroke()
-        print(k)
+        print("\(self.currentSeconds)/\(totalSeconds)=\(k)")
     }
     
     private func createLabTime() {

@@ -13,8 +13,18 @@ class MainModel {
     
     private var controller: MainVC
     
+    
+    let settingsService = SettingsService.standard
+    
+    
     init(controller: MainVC) {
         self.controller = controller
+    }
+    
+    
+    func getCurrentTheme() -> Theme {
+        let themeName = settingsService.themeName
+        return ThemeService.getTheme(by: themeName)
     }
     
     

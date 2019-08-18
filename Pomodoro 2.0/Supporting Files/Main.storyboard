@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Controller-->
+        <!--MainVC-->
         <scene sceneID="3Rp-e6-MsB">
             <objects>
-                <viewController id="kLd-KT-l9i" customClass="MainController" customModule="Pomodoro_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kLd-KT-l9i" customClass="MainVC" customModule="Pomodoro_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eWH-b2-ISS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,10 +26,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3G7-vX-rnG"/>
-                        <connections>
-                            <outlet property="pomodoroTimer" destination="huf-rC-Fwg" id="CGJ-cr-cUY"/>
-                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="pomodoroTimerVeiw" destination="huf-rC-Fwg" id="hOK-19-ctC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fsd-FZ-Dp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
