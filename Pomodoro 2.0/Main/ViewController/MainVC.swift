@@ -31,15 +31,6 @@ class MainVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        pomodoroTimerVeiw.configure(configuration: PomodoroTimerConfiguration(workSeconds: 25,
-                                                                              smallRelaxSeconds: 5,
-                                                                              bigRelaxSeconds: 20,
-                                                                              bigRelaxEvery: 4,
-                                                                              currentSeconds: 0,
-                                                                              currentCircle: 0,
-                                                                              totalCircles: 10,
-                                                                              currentState: .work))
-        pomodoroTimerVeiw.startTimer()
     }
     
     
