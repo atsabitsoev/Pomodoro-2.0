@@ -13,6 +13,8 @@
 		AC9AC4F52309724C00118E93 /* PomodoroTimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9AC4F22309724C00118E93 /* PomodoroTimerState.swift */; };
 		AC9AC4F62309724C00118E93 /* PomodoroTimerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9AC4F32309724C00118E93 /* PomodoroTimerConfiguration.swift */; };
 		AC9AC4F9230975AF00118E93 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9AC4F8230975AF00118E93 /* MainVC.swift */; };
+		AC9AC500230987BF00118E93 /* GradientTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9AC4FE230987BF00118E93 /* GradientTextButton.swift */; };
+		AC9AC501230987BF00118E93 /* GradientTextButtonRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9AC4FF230987BF00118E93 /* GradientTextButtonRounded.swift */; };
 		ACD769872306E74200918F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD769862306E74200918F83 /* AppDelegate.swift */; };
 		ACD7698F2306E74200918F83 /* Pomodoro_2_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACD7698D2306E74200918F83 /* Pomodoro_2_0.xcdatamodeld */; };
 		ACD769912306E74400918F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD769902306E74400918F83 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		AC9AC4F22309724C00118E93 /* PomodoroTimerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroTimerState.swift; sourceTree = "<group>"; };
 		AC9AC4F32309724C00118E93 /* PomodoroTimerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroTimerConfiguration.swift; sourceTree = "<group>"; };
 		AC9AC4F8230975AF00118E93 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		AC9AC4FE230987BF00118E93 /* GradientTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientTextButton.swift; sourceTree = "<group>"; };
+		AC9AC4FF230987BF00118E93 /* GradientTextButtonRounded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientTextButtonRounded.swift; sourceTree = "<group>"; };
 		ACD769832306E74200918F83 /* Pomodoro 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pomodoro 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD769862306E74200918F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD7698E2306E74200918F83 /* Pomodoro_2_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pomodoro_2_0.xcdatamodel; sourceTree = "<group>"; };
@@ -73,7 +77,7 @@
 		AC9AC4E62309700D00118E93 /* ViewEntities */ = {
 			isa = PBXGroup;
 			children = (
-				AC9AC4EF2309722500118E93 /* Entities */,
+				AC9AC4F02309724C00118E93 /* PomodoroTimerView */,
 			);
 			path = ViewEntities;
 			sourceTree = "<group>";
@@ -84,14 +88,6 @@
 				AC9AC4EB2309704B00118E93 /* MainModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		AC9AC4EF2309722500118E93 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				AC9AC4F02309724C00118E93 /* PomodoroTimerView */,
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		AC9AC4F02309724C00118E93 /* PomodoroTimerView */ = {
@@ -110,6 +106,23 @@
 				AC9AC4F8230975AF00118E93 /* MainVC.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AC9AC4FC230987A500118E93 /* Global UI */ = {
+			isa = PBXGroup;
+			children = (
+				AC9AC4FD230987BF00118E93 /* GradientTextButton */,
+			);
+			path = "Global UI";
+			sourceTree = "<group>";
+		};
+		AC9AC4FD230987BF00118E93 /* GradientTextButton */ = {
+			isa = PBXGroup;
+			children = (
+				AC9AC4FE230987BF00118E93 /* GradientTextButton.swift */,
+				AC9AC4FF230987BF00118E93 /* GradientTextButtonRounded.swift */,
+			);
+			path = GradientTextButton;
 			sourceTree = "<group>";
 		};
 		ACD7697A2306E74200918F83 = {
@@ -131,6 +144,7 @@
 		ACD769852306E74200918F83 /* Pomodoro 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				AC9AC4FC230987A500118E93 /* Global UI */,
 				AC9AC4E323096FF200118E93 /* Main */,
 				ACD7699D2306E91E00918F83 /* SettingsModel */,
 				AC9AC4E023096FA600118E93 /* Supporting Files */,
@@ -224,10 +238,12 @@
 				AC9AC4F52309724C00118E93 /* PomodoroTimerState.swift in Sources */,
 				ACD7699C2306E81F00918F83 /* SettingsService.swift in Sources */,
 				AC9AC4EC2309704B00118E93 /* MainModel.swift in Sources */,
+				AC9AC500230987BF00118E93 /* GradientTextButton.swift in Sources */,
 				AC9AC4F9230975AF00118E93 /* MainVC.swift in Sources */,
 				ACD7699F2306E93F00918F83 /* Themes.swift in Sources */,
 				AC9AC4F62309724C00118E93 /* PomodoroTimerConfiguration.swift in Sources */,
 				AC9AC4F42309724C00118E93 /* PomodoroTimerView.swift in Sources */,
+				AC9AC501230987BF00118E93 /* GradientTextButtonRounded.swift in Sources */,
 				ACD7698F2306E74200918F83 /* Pomodoro_2_0.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

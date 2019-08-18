@@ -15,6 +15,7 @@ class MainVC: UIViewController {
     
     
     @IBOutlet weak var pomodoroTimerVeiw: PomodoroTimerView!
+    @IBOutlet weak var butChangeTask: GradientTextButton!
     
     
     private var theme: Theme!
@@ -27,7 +28,9 @@ class MainVC: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
+        theme = model.getCurrentTheme()
         configurePomodoroTimerView()
+        configureButChangeTask()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,7 +43,6 @@ class MainVC: UIViewController {
     
     
     private func configurePomodoroTimerView() {
-        let theme = model.getCurrentTheme()
         let mainColor = theme.mainColor
         let darkColor = theme.mainColorDark
         let backgroundColor = theme.backgroundColor
@@ -49,6 +51,10 @@ class MainVC: UIViewController {
         pomodoroTimerVeiw.additionalColor = darkColor
         pomodoroTimerVeiw.indicatorColor = backgroundColor
         pomodoroTimerVeiw.shadowColor = shadowColor
+    }
+    
+    private func configureButChangeTask() {
+        butChangeTask.gradientColors = [theme.mainColor, theme.additionalColor]
     }
 
 }
